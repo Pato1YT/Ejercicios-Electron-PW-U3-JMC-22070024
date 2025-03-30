@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">-->
+    <meta content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <!--<link href="./styles.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="./node_modules/bulma/css/bulma.min.css">
+    <title>Ejercicio 6</title>
+  </head>
+  <body class="container is-fluid">
+    <div class="box" style="margin-top: 20px;">
+      <h4 class="title is-4">Calificaciones Chanon</h4>
+      <label for="n1">Introduce la calificación alfabética:</label>
+      <div class="field">
+          <div class="control" style="margin-top: 20px;">
+              <input type="text" class="input" id="caja">
+          </div>
+      </div>
+    </div>
+
+    <button onclick="convertirMetros()" class="button is-primary" id="boton">Convertir</button>
+
+    <br>
+
+    <div class="field container" style="margin-top: 20px;">
+      <div class="control" id="resultado"></div>
+    </div>  
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>

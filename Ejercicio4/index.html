@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">-->
+    <meta content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <!--<link href="./styles.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="./node_modules/bulma/css/bulma.min.css">
+    <title>Ejercicio 4</title>
+  </head>
+  <body class="container is-fluid" >
+    <div class="box" style="margin-top: 20px;">
+      <h3 class="title is-3 is-spaced">Votación Chanon</h3>
+      <p class="subtitle is-4">Selecciona una opcion: <spann id="votos">(Votos restantes 20)</span></p>
+
+      <div class="control">
+        <label class="radio">
+          <input onclick="elegirVotar()" type="radio" name="rsvp" value="América"/>
+          América
+        </label>
+        <label class="radio">
+          <input onclick="elegirVotar()" type="radio" name="rsvp" value="Chivas"/>
+          Chivas
+        </label>
+        <label class="radio">
+          <input onclick="elegirVotar()" type="radio" name="rsvp" value="Pachuca"/>
+          Pachuca
+        </label>
+      </div>
+    </div>
+    <br>
+
+    <a onclick="votar()" class="button is-primary" id="boton">Votar</a>    
+
+    <br>
+    <br>
+
+    <div id="sin-votos"></div>
+
+    <br>
+
+    <div id="resultados"></div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>

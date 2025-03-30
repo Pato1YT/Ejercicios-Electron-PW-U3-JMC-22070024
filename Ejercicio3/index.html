@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">-->
+    <meta content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <!--<link href="./styles.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="./node_modules/bulma/css/bulma.min.css">
+    <title>Ejercicio 3</title>
+  </head>
+  <body class="container is-fluid" onload="cargarEventos()">
+    <div class="box" style="margin-top: 20px;">
+      <h4 class="title is-4">Calculadora Chanon</h4>
+      <label for="n1">Numero 1: </label>
+      <div class="field">
+        <div class="control">
+          <input type="text" class="input" id="n1">
+        </div>
+      </div>
+      
+      <br>
+
+      <label for="n1">Numero 2: </label>
+      <div class="field">
+        <div class="control">
+          <input type="text" class="input" id="n2">
+        </div>
+      </div>
+      
+      <br>
+
+      <label for="op">Escoge la operacion: </label>
+      <div class="select">
+        <select name="" id="opcion">
+          <option value="1">Sumar</option>
+          <option value="2">Restar</option>
+          <option value="3">Multiplicar</option>
+          <option value="4">Dividir</option>
+        </select>
+      </div>
+      <br>
+    </div>
+    <br>
+
+    <a onclick="operacion()" class="button is-primary">Calcular</a>
+  
+    <br>
+    <br>
+
+    <div id="resultado"></div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>

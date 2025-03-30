@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">-->
+    <meta content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <!--<link href="./styles.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="./node_modules/bulma/css/bulma.min.css">
+    <title>Ejercicio 7</title>
+  </head>
+  <body class="container is-fluid">
+    <div class="box" style="margin-top: 20px;">
+
+      <h3 class="title is-3 is-spaced">Adivina el número Chanon</h3>
+      <p class="subtitle is-4">El número ya ha sido generado <spann id="intentos">(Te quedan 5 intentos)</span></p>
+
+      <label for="n1">Introduce tu número: </label>
+      <div class="field">
+        <div class="control">
+          <input type="text" class="input" id="caja">
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <a onclick="adivinar()" class="button is-primary">Adivinar</a>
+  
+    <br>
+    <br>
+
+    <div id="resultado"></div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>
