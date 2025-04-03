@@ -29,10 +29,19 @@ function adivinar() {
             intentos.innerHTML = "(Te quedan "+intentosRes+" intentos)";
         }else{
             resultado.innerHTML = "<p class='notification is-success'>Felicidades, adivinaste el número</p>";
+            resultado.innerHTML+= "<a onclick='location.reload()' class='button is-primary'>Volver a jugar</a>"
         }
     }else{
-        intentos.innerHTML = "(Te quedan "+0+" intentos)";
-        resultado.innerHTML = "<p class='notification is-danger'>Te quedaste sin intentos, el número era: "+numero+"</p>";
+        if(caja===numero)
+        {
+            resultado.innerHTML = "<p class='notification is-success'>Felicidades, adivinaste el número</p>";
+            resultado.innerHTML+= "<a onclick='location.reload()' class='button is-primary'>Volver a jugar</a>"
+        }else{
+            intentos.innerHTML = "(Te quedan "+0+" intentos)";
+            resultado.innerHTML = "<p class='notification is-danger'>Te quedaste sin intentos, el número era: "+numero+"</p>";
+            resultado.innerHTML+= "<a onclick='location.reload()' class='button is-primary'>Volver a jugar</a>"
+            document.getElementById('control').innerHTML = "<input type='text' class='input' id='caja' disabled/>"
+        }
     }
 
 }
